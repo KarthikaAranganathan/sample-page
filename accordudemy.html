@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Courier New", Courier, monospace;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: aquamarine;
+      }
+      #accordion {
+        margin: 100px auto;
+        width: 600px;
+        /* border: 2px solid red; */
+      }
+      #accordion li {
+        list-style: none;
+        width: 100%;
+        margin-bottom: 10px;
+        background: #fff;
+        padding: 10px;
+        border-radius: 6px;
+       
+      }
+      #accordion li label {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 18px;
+        
+        font-weight: 500;
+        cursor: pointer;
+        color: #c20000;
+        /* border: 1px solid gray; */
+        border-bottom:2px solid green;
+      }
+      #accordion li label span{
+        transform: rotate(90deg);
+        font-size: 22px;
+        color: #333;
+
+      }
+      #accordion label+input[type="radio"]
+      {
+        display: none;
+      }
+      #accordion .content{
+        
+        padding: 0 10px;
+        line-height: 26px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        
+      }
+      #accordion label+input[type="radio"]:checked+.content
+      {
+        max-height: 400px;
+      }
+      /* #accordion .content{
+        max-height: 400px;
+      } */
+
+    </style>
+  </head>
+  <body>
+    <ul id="accordion">
+      <li>
+        <label for="First">01. What is Accordian?<span>&#x3e</span></label>
+        <input type="radio" name="accordian" id="first" checked />
+        <div class="content">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque
+            laudantium veniam labore, modi odio beatae molestias excepturi
+            magnam saepe qui consequatur, officiis in sunt voluptate nam
+            suscipit impedit quae cumque.
+          </p>
+        </div>
+      </li>
+      <li>
+        <label for="second">How to Create Accordian?<span>&#x3e</span></label>
+        <input type="radio" name="accordian" id="second"  />
+        <div class="content">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque
+            laudantium veniam labore, modi odio beatae molestias excepturi
+            magnam saepe qui consequatur, officiis in sunt voluptate nam
+            suscipit impedit quae cumque.
+          </p>
+        </div>
+      </li>
+      <li>
+        <label for="third">Where to use Accordian?<span>&#x3e</span></label>
+        <input type="radio" name="accordian" id="third"  />
+        <div class="content">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque
+            laudantium veniam labore, modi odio beatae molestias excepturi
+            magnam saepe qui consequatur, officiis in sunt voluptate nam
+            suscipit impedit quae cumque.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>
